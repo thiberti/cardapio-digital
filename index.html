@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cardápio Digital - Empresa X</title>
+  <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+</head>
+<script src="script.js"></script>
+
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-content">
+      <img src="icon.png" alt="logo" width="50px" height="50px">
+      <div>
+        <h1>Restaurante MT SABORES</h1>
+        <p class="subtitulo">Cardápio Digital</p>
+      </div>
+      <button class="botao-carrinho" onclick="abrirCarrinho()">
+        Enviar Pedido
+        <span class="badge-carrinho oculto" id="badgeCarrinho">0</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Container Principal -->
+  <div class="container">
+    <!-- Campo de Nome -->
+    <div class="campo-nome">
+      <label for="nomeUsuario">Seu nome (obrigatório):</label>
+      <input type="text" id="nomeUsuario" placeholder="Digite seu nome completo">
+    </div>
+
+    <div class="categoria">
+
+    </div>
+    
+    <!-- Grid de Pratos -->
+    <div class="grid-pratos">
+      <!-- Prato 1 -->
+      <div class="card-prato">
+        <img src="https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?w=400&h=300&fit=crop"
+          alt="Filé à Parmegiana" class="imagem-prato">
+        <div class="info-prato">
+          <h3 class="nome-prato">Filé à Parmegiana</h3>
+          <p class="descricao-prato">Filé bovino empanado com molho de tomate e queijo, acompanha arroz, batata frita e
+            salada</p>
+          <div class="rodape-card">
+            <span class="preco">R$ 0,00</span>
+            <button class="botao-adicionar" onclick="adicionarAoCarrinho('Filé à Parmegiana', 28.90)">Adicionar</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Prato 2 -->
+      <div class="card-prato">
+        <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=400&h=300&fit=crop"
+          alt="Frango Grelhado" class="imagem-prato">
+        <div class="info-prato">
+          <h3 class="nome-prato">Frango Grelhado</h3>
+          <p class="descricao-prato">Peito de frango grelhado com legumes, arroz integral e salada verde</p>
+          <div class="rodape-card">
+            <span class="preco">R$ 0,00</span>
+            <button class="botao-adicionar" onclick="adicionarAoCarrinho('Frango Grelhado', 22.50)">Adicionar</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Prato 3 -->
+      <div class="card-prato">
+        <img src="https://images.unsplash.com/photo-1574894709920-11b28e7367e3?w=400&h=300&fit=crop"
+          alt="Lasanha Bolonhesa" class="imagem-prato">
+        <div class="info-prato">
+          <h3 class="nome-prato">Lasanha Bolonhesa</h3>
+          <p class="descricao-prato">Lasanha tradicional com molho bolonhesa e queijo gratinado, acompanha salada</p>
+          <div class="rodape-card">
+            <span class="preco">R$ 0,00</span>
+            <button class="botao-adicionar" onclick="adicionarAoCarrinho('Lasanha Bolonhesa', 24.90)">Adicionar</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Prato 4 -->
+      <div class="card-prato">
+        <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=400&h=300&fit=crop"
+          alt="Salmão Grelhado" class="imagem-prato">
+        <div class="info-prato">
+          <h3 class="nome-prato">Salmão Grelhado</h3>
+          <p class="descricao-prato">Filé de salmão grelhado com molho de ervas, arroz e legumes no vapor</p>
+          <div class="rodape-card">
+            <span class="preco">R$ 0,00</span>
+            <button class="botao-adicionar" onclick="adicionarAoCarrinho('Salmão Grelhado', 35.90)">Adicionar</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Prato 5 -->
+      <div class="card-prato">
+        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&h=300&fit=crop"
+          alt="Hambúrguer Artesanal" class="imagem-prato">
+        <div class="info-prato">
+          <h3 class="nome-prato">Hambúrguer Artesanal</h3>
+          <p class="descricao-prato">Hambúrguer 180g com queijo, bacon, alface, tomate e batata rústica</p>
+          <div class="rodape-card">
+            <span class="preco">R$ 0,00</span>
+            <button class="botao-adicionar"
+              onclick="adicionarAoCarrinho('Hambúrguer Artesanal', 26.90)">Adicionar</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Prato 6 -->
+      <div class="card-prato">
+        <img src="https://images.unsplash.com/photo-1546793665-c74683f339c1?w=400&h=300&fit=crop" alt="Salada Caesar"
+          class="imagem-prato">
+        <div class="info-prato">
+          <h3 class="nome-prato">Salada Caesar</h3>
+          <p class="descricao-prato">Alface romana, frango grelhado, croutons, parmesão e molho caesar</p>
+          <div class="rodape-card">
+            <span class="preco">R$ 0,00</span>
+            <button class="botao-adicionar" onclick="adicionarAoCarrinho('Salada Caesar', 19.90)">Adicionar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal do Carrinho -->
+  <div class="modal-carrinho" id="modalCarrinho" onclick="fecharCarrinho()">
+    <div class="conteudo-modal" onclick="event.stopPropagation()">
+      <div class="header-modal">
+        <h2>Seu Pedido</h2>
+        <button class="fechar-modal" onclick="fecharCarrinho()">×</button>
+      </div>
+
+      <div class="lista-carrinho" id="listaCarrinho">
+        <!-- Itens serão adicionados aqui pelo JavaScript -->
+      </div>
+
+      <div class="total-carrinho">
+        <div class="total-valor">
+          <span>Total:</span>
+          <span id="valorTotal">R$ 0,00</span>
+        </div>
+      </div>
+
+      <button class="botao-enviar" onclick="enviarPedidoWhatsApp()">
+        📱 Enviar Pedido via WhatsApp
+      </button>
+    </div>
+  </div>
+
+<footer class="footer-outback">
+  <p>© 2025 Outback Steakhouse Todos os direitos reservados.  
+  Todas as marcas registradas são propriedade dos seus respectivos donos.</p>
+  <p>
+    <a href="#">Aviso de Privacidade</a> |
+    <a href="#">Política de proteção de dados</a> |
+    <a href="#">Regulamentos</a>
+  </p>
+</footer>
+
+</body>
+
+</html>
