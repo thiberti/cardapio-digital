@@ -126,9 +126,7 @@ function enviarPedidoWhatsApp() {
 
     mensagem += `*Total: R$ ${total.toFixed(2).replace('.', ',')}*`;
 
-    // IMPORTANTE: Substitua pelo número do WhatsApp do restaurante
-    // Formato: código do país (55) + DDD + número
-    // Exemplo: 5511999999999
+    // Número do WhatsApp do restaurante
     const numeroWhatsApp = '5511963537103';
 
     const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
